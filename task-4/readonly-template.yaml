@@ -1,0 +1,36 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Hello! I'm working on the first lab for cloud architectures.
+
+Resources:
+  LabViewOnlyPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action:
+              - "s3:Get*"
+              - "s3:List*"
+              - "ec2:Describe*"
+              - "rds:Describe*"
+              - "iam:Get*"
+              - "iam:List*"
+            Resource: "*"
+  
+  LabViewOnlyRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument: 
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS: !Sub "arn:aws:iam::${AWS::AccountId}:root"
+            Action: "sts:AssumeRole"
+      ManagedPolicyArns:
+        - !Ref LabViewOnlyPolicy
+
+Outputs:
+  RoleArn:
+    Value: !GetAtt LabViewOnlyRole.Arn
