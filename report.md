@@ -6,3 +6,7 @@
 2) IaM Identity Center Admin User 
 ![first task](./task-1/2.png)
 ![first task](./task-1/3.png)
+
+## Завдання 2
+1) Organization
+![second task](./task-2/1.png)
