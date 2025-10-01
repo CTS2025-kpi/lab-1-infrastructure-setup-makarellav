@@ -14,3 +14,8 @@
 ## Завдання 3
 1) View only user
 ![third task](./task-3/1.png)
+
+## Завдання 4
+1) CF Stack
+![fourth task](./task-4/1.png)
+![fourth task](./task-4/2.png)
