@@ -10,3 +10,7 @@
 ## Завдання 2
 1) Organization
 ![second task](./task-2/1.png)
+
+## Завдання 3
+1) View only user
+![third task](./task-3/1.png)
